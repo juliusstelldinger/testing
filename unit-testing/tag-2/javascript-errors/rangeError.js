@@ -1,5 +1,12 @@
 // Folgender Code wirft einen RangeError
-
 const array = [];
 
-array.length = -1;
+try {
+  array.length = -1;
+  //ab hier Sinflut
+  console.log("nie");
+} catch (err) {
+  console.log("Hallo");
+} finally {
+  console.log("immer");
+}

@@ -1,6 +1,6 @@
 const { sumOfNumbers } = require("./inputValidation");
 
-describe("sumOfNumbers", () => {
+describe.skip("sumOfNumbers", () => {
   describe("Berechnung", () => {
     test("ob -100 und 101 die Summe 1 ergibt", () => {
       const [a, b] = [-100, 101];
@@ -11,7 +11,7 @@ describe("sumOfNumbers", () => {
     });
   });
 
-  describe.skip("InputValidation", () => {
+  describe("InputValidation", () => {
     test("Strings führen zu TypeError", () => {
       const [a, b] = ["Hallo", 101];
 
