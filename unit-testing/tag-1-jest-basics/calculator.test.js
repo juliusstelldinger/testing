@@ -1,8 +1,14 @@
 const calculator = require("./calculator");
 
 test("Die Summe von 2 + 5 ist 7", () => {
-  const result = calculator.sum(2, 5);
+  //Arrange
+  const a = 2;
+  const b = 5;
 
+  //Act
+  const result = calculator.sum(a, b);
+
+  //Assert btw. Expect
   expect(result).toEqual(7);
 });
 
