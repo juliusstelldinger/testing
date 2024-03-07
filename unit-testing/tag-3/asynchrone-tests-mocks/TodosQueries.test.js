@@ -16,7 +16,7 @@ const returnedTodo1 = {
 
 describe("Testing GET Functions of Todo Route", () => {
   afterEach(() => {
-    axios.mockRestore();
+    jest.clearAllMocks();
   });
 
   test("Teste GET all Funktion", async () => {
@@ -45,7 +45,7 @@ describe("Testing GET Functions of Todo Route", () => {
     const result = await TodosQueries.fetchTodoById(6);
 
     expect(result).toEqual(myInput.data.todo);
-    expect(axios.get).toHaveBeenCalledTimes(2);
+    expect(axios.get).toHaveBeenCalledTimes(1);
     expect(axios.get).toHaveBeenCalledWith(
       "http://localhost:5050/v1/todos/byid",
       { params: { todoId: 6 } }
